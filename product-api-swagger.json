@@ -19,20 +19,16 @@
                   "type": "object",
                   "properties": {
                     "id": {
-                      "type": "integer",
-                      "example": 1
+                      "type": "integer"
                     },
                     "name": {
-                      "type": "string",
-                      "example": "Mobile"
+                      "type": "string"
                     },
                     "description": {
-                      "type": "string",
-                      "example": "Android smart phone"
+                      "type": "string"
                     },
                     "price": {
-                      "type": "integer",
-                      "example": 21999
+                      "type": "integer"
                     }
                   }
                 }
