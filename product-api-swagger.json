@@ -1,0 +1,45 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Product details API",
+      "version": "1.0.0",
+      "description": "An example API for showing the product details...."
+    },
+    "basePath": "http://localhost:5000",
+    "paths": {
+      "/api/products": {
+        "get": {
+          "summary": "Get product Details................",
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Mobile"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "Android smart phone"
+                    },
+                    "price": {
+                      "type": "integer",
+                      "example": 21999
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
