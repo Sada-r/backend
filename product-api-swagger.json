@@ -5,9 +5,9 @@
       "version": "1.0.0",
       "description": "An example API for showing the product details...."
     },
-    "basePath": "http://localhost:5000",
+    "basePath": "http://localhost:5000/api/products",
     "paths": {
-      "/api/products": {
+      "/p": {
         "get": {
           "summary": "Get product Details................",
           "responses": {
