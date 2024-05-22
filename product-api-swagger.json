@@ -1,34 +1,46 @@
 {
-    "swagger": "2.0",
+    "openapi": "3.0.0",
     "info": {
-      "title": "Product details API",
-      "version": "1.0.0",
-      "description": "An example API for showing the product details...."
+      "title": "Dummy JSON Products API",
+      "description": "This is a sample API for dummy products.",
+      "version": "1.0.0"
     },
-    "basePath": "http://localhost:5000/api/products",
+    "servers": [
+      {
+        "url": "https://dummyjson.com"
+      }
+    ],
     "paths": {
-      "/p": {
+      "/products": {
         "get": {
-          "summary": "Get product Details................",
+          "summary": "Get all products",
+          "description": "Retrieve a list of all products",
           "responses": {
             "200": {
-              "description": "Successful response",
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "price": {
-                      "type": "integer"
+              "description": "A list of products",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "products": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/Product"
+                        }
+                      },
+                      "total": {
+                        "type": "integer",
+                        "example": 100
+                      },
+                      "skip": {
+                        "type": "integer",
+                        "example": 0
+                      },
+                      "limit": {
+                        "type": "integer",
+                        "example": 30
+                      }
                     }
                   }
                 }
@@ -36,6 +48,98 @@
             }
           }
         }
+      },
+      "/products/{id}": {
+        "get": {
+          "summary": "Get a single product",
+          "description": "Retrieve a product by its ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": "true",
+              "schema": {
+                "type": "integer"
+              },
+              "description": "The ID of the product to retrieve"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A single product",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Product not found"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Product": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "example": 1
+            },
+            "title": {
+              "type": "string",
+              "example": "iPhone 9"
+            },
+            "description": {
+              "type": "string",
+              "example": "An apple mobile which is nothing like apple"
+            },
+            "price": {
+              "type": "number",
+              "format": "float",
+              "example": 549
+            },
+            "discountPercentage": {
+              "type": "number",
+              "format": "float",
+              "example": 12.96
+            },
+            "rating": {
+              "type": "number",
+              "format": "float",
+              "example": 4.69
+            },
+            "stock": {
+              "type": "integer",
+              "example": 94
+            },
+            "brand": {
+              "type": "string",
+              "example": "Apple"
+            },
+            "category": {
+              "type": "string",
+              "example": "smartphones"
+            },
+            "thumbnail": {
+              "type": "string",
+              "example": "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+            },
+            "images": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "https://i.dummyjson.com/data/products/1/1.jpg"
+              }
+            }
+          }
+        }
       }
     }
   }
+  
