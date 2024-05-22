@@ -11,15 +11,6 @@ spec:
   lifecycle: experimental
   owner: user:guest
   providesApis:
-    - product-api
+    - product-api  
 
-kind: API
-metadata:
-  name: product-api
-  description: This product api gives the product details as response
-spec:
-  type: openapi
-  lifecycle: experimental
-  owner: user:guest
-  definition:
-    $text: https://github.com/Sada-r/backend/blob/master/product-api-swagger.json  
+    
