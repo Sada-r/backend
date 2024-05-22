@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Product-App
+  description: This is a Node.js app to get product details
+  tags:
+    - node
+
+spec:
+  type: service
+  lifecycle: experimental
+  owner: Sada
