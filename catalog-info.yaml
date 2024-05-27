@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: Product-App
   description: This is a Node.js app to get product details
-  backstage.io/techdocs-ref: https://github.com/Sada-r/backend/blob/master/catalog-info.yaml
+  backstage.io/techdocs-ref: https://github.com/Sada-r/backend/blob/master/docs/index.md
   tags:
     - node
 
