@@ -1,5 +1,7 @@
-site_name: My Project Docs
+site_name: 'Praduct-App-Doc'
+
 nav:
   - Home: index.md
+
 plugins:
   - techdocs-core
