@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: Product-App
   annotations:
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: dir:./docs
   description: This is a Node.js app to get product details
   tags:
     - node
