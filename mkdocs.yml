@@ -1,0 +1,6 @@
+site_name: My Project Docs
+nav:
+  - Home: index.md
+  - API: api.md
+plugins:
+  - techdocs-core

@@ -2,8 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Product-App
+  annotations:
+    backstage.io/techdocs-ref: dir:./docs
   description: This is a Node.js app to get product details
-  backstage.io/techdocs-ref: https://github.com/Sada-r/backend/blob/master/docs/index.md
   tags:
     - node
 
