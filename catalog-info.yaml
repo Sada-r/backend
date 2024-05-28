@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: Product-App
   description: This is a Node.js app to get product details
-  annotations:
-    backstage.io/managed-by-location: https://github.com/Sada-r/backend/blob/master/catalog-info.yaml
+  # annotations:
+  #   backstage.io/managed-by-location: https://github.com/Sada-r/backend/blob/master/catalog-info.yaml
   tags:
     - node js
 
@@ -14,3 +14,16 @@ spec:
   owner: user:guest
   providesApis:
     - product-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: product-api
+  description: This product api gives the product details as response
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user:guest
+  definition:
+    $text: https://github.com/Sada-r/backend/blob/master/product-api-swagger.json
