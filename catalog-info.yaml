@@ -6,7 +6,7 @@ metadata:
   # annotations:
   #   backstage.io/managed-by-location: https://github.com/Sada-r/backend/blob/master/catalog-info.yaml
   tags:
-    - node js
+    - node 
 
 spec:
   type: service
