@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Product-App
+  name: my-product-App
   description: This is a Node.js app to get product details
   annotations:
     backstage.io/techdocs-ref: dir:.
@@ -13,13 +13,13 @@ spec:
   lifecycle: experimental
   owner: user:guest
   providesApis:
-    - product-api
+    - my-product-api
 
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: product-api
+  name: my-product-api
   description: This product api gives the product details as response
 spec:
   type: openapi
